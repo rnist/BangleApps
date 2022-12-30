@@ -302,6 +302,10 @@ function showMessage(msgid) {
     buttons.push({type:"btn", src:atob("GRSBAAAAAYAAAcAAAeAAAfAAAfAAAfAAAfAAAfAAAfBgAfA4AfAeAfAPgfAD4fAA+fAAP/AAD/AAA/AAAPAAADAAAA=="), cb:()=>{
       msg.new = false;
       cancelReloadTimeout(); // don't auto-reload to clock now
+      //optionally delete texts upon confirm
+      if (settings.delTxtOnOK && msg.type === 'text') {
+        MESSAGES = MESSAGES.filter(m=>m.id!=msg.id);
+      }
       Bangle.messageResponse(msg,true);
       checkMessages({clockIfNoMsg:1,clockIfAllRead:1,showMsgIfUnread:1,openMusic:openMusic});
     }});

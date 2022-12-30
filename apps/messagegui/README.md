@@ -24,6 +24,7 @@ to the clock where a ringing bell will be shown in the Widget bar.
 is chosen if there isn't much message text, but this specifies the smallest the font should get before
 it starts getting clipped.
 * `Auto-Open Music` - Should the app automatically open when the phone starts playing music?
+* `Delete texts on confirm` - Confirming the text message deletes it(like delete from the individual message menu)
 * `Unlock Watch` - Should the app unlock the watch when a new message arrives, so you can touch the buttons at the bottom of the app?
 
 ## New Messages

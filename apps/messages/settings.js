@@ -77,6 +77,10 @@
       format: v => v ? v :/*LANG*/"Hide",
       onchange: v => updateSetting("maxMessages", v)
     },
+    /*LANG*/'Delete texts on confirm': {
+      value: !!settings().delTxtOnOK,
+      onchange: v => updateSetting("delTxtOnOK", v)
+    },
     /*LANG*/'Icon color mode': {
       value: Math.max(0,iconColorModes.indexOf(settings().iconColorMode)),
       min: 0, max: iconColorModes.length - 1,
