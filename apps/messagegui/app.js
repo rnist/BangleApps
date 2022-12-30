@@ -303,7 +303,10 @@ function showMessage(msgid) {
       msg.new = false;
       cancelReloadTimeout(); // don't auto-reload to clock now
       //optionally delete texts upon confirm
+      console.log('Del set', settings.delTxtOnOK);
+      console.log('Msg type', msg.type);
       if (settings.delTxtOnOK && msg.type === 'text') {
+        console.log('Msg id', msg.id);
         MESSAGES = MESSAGES.filter(m=>m.id!=msg.id);
       }
       Bangle.messageResponse(msg,true);
