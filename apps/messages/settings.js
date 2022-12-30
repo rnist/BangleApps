@@ -13,7 +13,7 @@
     settings.unlockWatch=!!settings.unlockWatch;
     settings.openMusic=!!settings.openMusic;
     settings.maxUnreadTimeout=240;
-    if (settings.flash===delTxtOnOK) settings.delTxtOnOK=false;
+    if (settings.delTxtOnOK===undefined) settings.delTxtOnOK=false;
     if (settings.flash===undefined) settings.flash=true;
     return settings;
   }
