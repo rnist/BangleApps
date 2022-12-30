@@ -12,7 +12,7 @@
     if (settings.iconColorMode === undefined) settings.iconColorMode = iconColorModes[0];
     settings.unlockWatch=!!settings.unlockWatch;
     settings.openMusic=!!settings.openMusic;
-    settings.delTxtOnOK=!!delTxtOnOK.openMusic;
+    settings.delTxtOnOK=!!settings.delTxtOnOK;
     settings.maxUnreadTimeout=240;
     if (settings.flash===undefined) settings.flash=true;
     return settings;
